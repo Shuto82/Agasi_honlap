@@ -1,0 +1,15 @@
+.MuiFormControl-root {
+    width: 100% !important;
+}
+
+.MuiBox-root {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+.RichTextEditor__editor___1QqIU {
+    height: 20vh;
+}

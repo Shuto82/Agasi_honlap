@@ -1,0 +1,63 @@
+body {
+    min-width: 280px;
+    background-color: lightblue;
+    height: 100vh;
+}
+
+@media (width: 650px) {
+
+    .side-div {
+        font-size: 30px !important;
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .headerpic {
+    display: none;
+}
+
+    iframe {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.headerpic {
+    max-height: 150px;
+    z-index: 1;
+}
+
+.ámre {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.side-div {
+    position: relative;
+    display: flex;
+    background-color: lightgray;
+    box-shadow: 0 0 15px;
+    font-size: 25px;
+}
+
+#main-div {
+    margin: 0 auto;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.MuiStack-root {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.MuiPaper-root {
+    justify-content: center;
+}
+
+.card-img {
+    margin: 0 auto;
+}
