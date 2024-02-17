@@ -2,12 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { NotFound } from "./NotFound";
-import {
-  Box,
-  Button,
-  FormControl,
-  TextField,
-} from "@mui/material";
+import { Box, Button, FormControl, TextField } from "@mui/material";
 import { useState } from "react";
 import { TextEditor } from "../components/TextEditor";
 import { FileInput } from "../components/FileInput";
@@ -26,7 +21,7 @@ export const AddPost = () => {
   const [loading, setLoading] = useState(false);
   const hook = "Feri";
 
-  if (!user) return <NotFound />;
+  if (!user || user.uid !== "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +32,7 @@ export const AddPost = () => {
         title,
         photoUrl,
         userId: user.uid,
-        description: story
+        description: story,
       });
       setUploaded(true);
     } catch (err) {
@@ -49,7 +44,7 @@ export const AddPost = () => {
 
   return (
     <div className="createPost">
-      <h3 style={{textAlign: 'center'}}>Hír hozzáadása</h3>
+      <h3 style={{ textAlign: "center" }}>Hír hozzáadása</h3>
       <Box
         component="form"
         sx={{
@@ -59,7 +54,7 @@ export const AddPost = () => {
         noValidate
         autoComplete="off"
       >
-        <Box className='d-flex w-100 p-2'>
+        <Box className="d-flex w-100 p-2">
           <TextField
             id="outlined-basic"
             label="Poszt címe"
@@ -68,7 +63,6 @@ export const AddPost = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          
         </Box>
         <FormControl sx={{ width: "100%", display: "flex" }}>
           <TextEditor story={story} setStory={setStory} />
@@ -76,9 +70,7 @@ export const AddPost = () => {
         <FileInput setImage={setImage} hook={hook} />
         <Button
           type="submit"
-          disabled={
-            title.length == 0 || story.length == 0 || !image
-          }
+          disabled={title.length == 0 || story.length == 0 || !image}
           variant="contained"
         >
           Feltöltés

@@ -14,7 +14,7 @@ export const AddPic = () => {
   const [uploaded, setUploaded] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!user) return <NotFound />;
+  if (!user || user.uid !== "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

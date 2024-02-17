@@ -19,7 +19,7 @@ console.log(song)
   return (
     <>
       <div className="container text-center">
-        <FadeIn><div>Üdvözöljük gyülekezetünk honlapján!</div></FadeIn>
+        <FadeIn><div style={{fontFamily: "Yellowtail", fontSize: "2.5rem"}}>Üdvözöljük gyülekezetünk honlapján!</div></FadeIn>
         <div className="fs-4 m-3">A hónap éneke</div>
         <div className="fs-1">{songNum}</div>
         <div className="fs-5 mt-4">

@@ -12,7 +12,7 @@ export const Navigationbar = () => {
 
   return (
     <>
-      <Navbar expand="md" className="bg-info sticky-top fs-5">
+      <Navbar expand="md" className="sticky-top fs-5" style={{backgroundColor: '#e6f772'}}> 
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

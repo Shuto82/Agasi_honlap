@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { editSong } from "../utilities/crudUtility";
-
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
+import { NotFound } from "../pages/NotFound";
 
 export const SideBar = () => {
+  const { user } = useContext(UserContext);
   const [song, setSong] = useState(null)
 
-  console.log(song)
+  if (!user || user.uid !== "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") return <NotFound />;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const id = "0POdGKvNgb4HikIj9IPl"

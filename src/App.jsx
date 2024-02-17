@@ -25,7 +25,7 @@ function App() {
     <>
       <BrowserRouter>
         <UserProvider>
-          <div className="img-container d-flex justify-content-between bg-info">
+          <div className="img-container d-flex justify-content-between" style={{backgroundColor: '#e6f772'}}>
             <img src={templomtélen} className="headerpic" alt="Templom télen" />
             <FadeIn className="ámre"><span >
               Ágasegyházi Református Missziói Egyházközség
@@ -41,7 +41,7 @@ function App() {
             <div className="col-md-2 justify-content-center side-div">
               <SongOfTheMonth />
             </div>
-            <div id="main-div" className="col-md-10 bg-info">
+            <div id="main-div" className="col-md-10 sand">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="signin" element={<SignIn />} />

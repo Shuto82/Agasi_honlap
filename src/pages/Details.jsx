@@ -10,6 +10,7 @@ import { UserContext } from '../context/UserContext';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { EditPost } from '../components/EditPost';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 
@@ -27,28 +28,24 @@ export const Details = () => {
   },[])
 
   const handleDelete = async () => {
-    if (user && admin) {
       await deleteData(post.id, post.photoUrl, "posts");
       navigate('/');
-    }
   }
 
   const handleEdit = () => {
-    if (user && admin) {
       setOpen(true);
-    }
   }
 
   return (
     <>
     <div className='container details mt-3'>
       <div style={{display: 'flex', justifyContent: 'center', height: "auto", width: 'auto'}}>
-      {post && <img src={post?.photoUrl} alt={post?.title} className='img-fluid' />}
+      {post && <LazyLoadImage src={post?.photoUrl} alt={post?.title} className='img-fluid' />}
       </div> 
-      <div style={{display: 'flex', justifyContent: 'center', fontSize: '2rem'}}>
+      <div style={{display: 'flex', justifyContent: 'center', fontSize: '2.5rem'}}>
       {post && parse(post?.title)}
       </div>
-      <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+      <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', fontSize: '1.5rem'}}>
         {post && parse(post.description)}
       </div>
       {user && user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2" && <div className='d-flex justify-content-center p-3'>

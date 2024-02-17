@@ -16,7 +16,7 @@ export const Contact = () => {
           Polgár Péter Pál, főgondnok: +3630
         </p><br />
         <h1 className="m-3"><AlternateEmailTwoToneIcon className="fs-1" color="success"></AlternateEmailTwoToneIcon> E-mail</h1>
-        <p className="fs-4 m-2">agasegyhaza/@/reformatus/./hu</p><br />
+        <p className="fs-4 m-2">agasegyhaza@reformatus.hu</p><br />
         <h1 className="m-3"><FacebookOutlinedIcon className="fs-1" color="success"></FacebookOutlinedIcon> Facebook</h1>
         <p className="fs-4 m-2"><a href="https://www.facebook.com/profile.php?id=100072184001086" target="_blank">Ide kattintva elérhető</a></p>
       </div>
