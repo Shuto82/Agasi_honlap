@@ -51,7 +51,7 @@ export const Details = () => {
       <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
         {post && parse(post.description)}
       </div>
-      {user && <div className='d-flex justify-content-center p-3'>
+      {user && user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2" && <div className='d-flex justify-content-center p-3'>
         <span>
           <DeleteIcon titleAccess='Törlés' sx={{color: 'red', fontSize: '2rem', cursor: 'pointer'}} onClick={handleDelete} />
          </span>
@@ -66,4 +66,4 @@ export const Details = () => {
     {open && <EditPost open = {open} setOpen = {setOpen} id = {post.id} desc = {post.description} t={post.title} photo={post.photoUrl} />}
   </>
   )
-} 
+}

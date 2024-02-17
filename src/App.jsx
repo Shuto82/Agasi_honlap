@@ -15,6 +15,10 @@ import { Gallery } from "./pages/Gallery";
 import { SideBar } from "./components/SideBar";
 import { SongOfTheMonth } from "./components/SongOfTheMonth";
 import { Contact } from "./pages/Contact";
+import styled, {keyframes} from "styled-components";
+import { fadeIn } from "react-animations";
+
+const FadeIn = styled.div`animation: 3s ${keyframes `${fadeIn}`}`;
 
 function App() {
   return (
@@ -23,9 +27,9 @@ function App() {
         <UserProvider>
           <div className="img-container d-flex justify-content-between bg-info">
             <img src={templomtélen} className="headerpic" alt="Templom télen" />
-            <span className="ámre">
+            <FadeIn className="ámre"><span >
               Ágasegyházi Református Missziói Egyházközség
-            </span>
+            </span></FadeIn>
             <img
               src={templomősszel}
               className="headerpic"

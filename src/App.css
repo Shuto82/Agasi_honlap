@@ -26,12 +26,15 @@ body {
 .headerpic {
     max-height: 150px;
     z-index: 1;
+    border: 3px solid white;
 }
 
 .ámre {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 50px;
+    margin-top: 10px;
+    padding: 3px;
 }
 
 .side-div {

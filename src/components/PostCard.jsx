@@ -18,7 +18,7 @@ export const PostCard = ({id, title, description, photoUrl, timestamp, maxLength
           {truncatedStory(description, maxLength)}
         </Card.Text>
         <Card.Text>{elapsedTime(timestamp)}</Card.Text>
-        <Button variant="primary" onClick={() => navigate('details/' + id)}>Részletek</Button>
+        <Button variant="primary" onClick={() => navigate('details/' + id)}>Tovább</Button>
       </Card.Body>
     </Card>
   </>
