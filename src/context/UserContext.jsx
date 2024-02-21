@@ -13,6 +13,7 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [msg, setMsg] = useState(null);
   const navigate = useNavigate();
+  const admin = "shuto82@gmail.com";
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -39,7 +40,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, logOutUser, signInUser, msg, setMsg }}
+      value={{ user, admin, logOutUser, signInUser, msg, setMsg }}
     >
       {children}
     </UserContext.Provider>

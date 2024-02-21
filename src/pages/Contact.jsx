@@ -3,26 +3,29 @@ import ContactPhoneTwoToneIcon from '@mui/icons-material/ContactPhoneTwoTone';
 import AlternateEmailTwoToneIcon from '@mui/icons-material/AlternateEmailTwoTone';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import SavingsIcon from '@mui/icons-material/Savings';
 
 export const Contact = () => {
   return (
     <div className="shadow rounded row">
       <div className="col-md-6 col-sm-12">
-      <h1 className="m-3"><ContactPhoneTwoToneIcon className="fs-1" color="success"></ContactPhoneTwoToneIcon> Telefon</h1>
-        <p className="fs-4 m-2">
+      <h2 className="m-3 gap-1"><ContactPhoneTwoToneIcon className="fs-1 m-1" color="success"></ContactPhoneTwoToneIcon>Telefon</h2>
+        <p className="fs-5 m-2">
           Adamek Norbert, lelkész: +36308470769
         </p>
-        <p className="fs-4 m-2">
+        <p className="fs-5 m-2">
           Polgár Péter Pál, főgondnok: +3630
         </p><br />
-        <h1 className="m-3"><AlternateEmailTwoToneIcon className="fs-1" color="success"></AlternateEmailTwoToneIcon> E-mail</h1>
-        <p className="fs-4 m-2">agasegyhaza@reformatus.hu</p><br />
-        <h1 className="m-3"><FacebookOutlinedIcon className="fs-1" color="success"></FacebookOutlinedIcon> Facebook</h1>
-        <p className="fs-4 m-2"><a href="https://www.facebook.com/profile.php?id=100072184001086" target="_blank">Ide kattintva elérhető</a></p>
+        <h2 className="m-3"><AlternateEmailTwoToneIcon className="fs-1 m-1" color="success"></AlternateEmailTwoToneIcon>E-mail</h2>
+        <p className="fs-5 m-2">agasegyhaza@reformatus.hu</p><br />
+        <h2 className="m-3"><FacebookOutlinedIcon className="fs-1 m-1" color="success"></FacebookOutlinedIcon>Facebook</h2>
+        <p className="fs-5 m-2"><a href="https://www.facebook.com/profile.php?id=100072184001086" target="_blank">Ide kattintva elérhető</a></p><br />
+        <h2 className="m-3"><SavingsIcon className="fs-1 m-1" color="success"></SavingsIcon>Bankszámlaszám</h2>
+        <p className="fs-5 m-2">52500147-11053246 (MBH Bank Zrt.)</p>
       </div>
       <div className="col-md-6 col-sm-12">
-        <h1 className="m-3"><MapOutlinedIcon className="fs-1" color="success"></MapOutlinedIcon> Címünk</h1>
-        <p className="fs-4 m-2">
+        <h2 className="m-3"><MapOutlinedIcon className="fs-1 m-1" color="success"></MapOutlinedIcon>Címünk</h2>
+        <p className="fs-5 m-2">
           <b>6076 Ágasegyháza, Rákóczi út 89.</b>
         </p>
         <p>Itt található a templom is, a parókia is.</p>

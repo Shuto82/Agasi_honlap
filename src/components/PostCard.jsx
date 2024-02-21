@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { elapsedTime, truncatedStory } from '../utilities/utils';
 import { useNavigate } from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 export const PostCard = ({id, title, description, photoUrl, timestamp, maxLength}) => {

@@ -9,12 +9,12 @@ import { Alerts } from "../components/Alerts";
 
 
 export const AddPic = () => {
-  const { user } = useContext(UserContext);
+  const { user, admin } = useContext(UserContext);
   const [image, setImage] = useState(null);
   const [uploaded, setUploaded] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!user || user.uid !== "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") return <NotFound />;
+  if (!user || user.email !== admin) return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -21,7 +21,6 @@ export const Details = () => {
   
   let params = useParams();
   const navigate = useNavigate();
-  console.log(params.id);
 
   useEffect(() => {
     readPost(params.id, setPost)
@@ -48,7 +47,7 @@ export const Details = () => {
       <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', fontSize: '1.5rem'}}>
         {post && parse(post.description)}
       </div>
-      {user && user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2" && <div className='d-flex justify-content-center p-3'>
+      {user && user.email === admin && <div className='d-flex justify-content-center p-3'>
         <span>
           <DeleteIcon titleAccess='Törlés' sx={{color: 'red', fontSize: '2rem', cursor: 'pointer'}} onClick={handleDelete} />
          </span>

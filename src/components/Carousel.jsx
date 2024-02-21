@@ -7,7 +7,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 
 export const Carousell = () => {
-  const {user} = useContext(UserContext);
+  const {user, admin} = useContext(UserContext);
   const [index, setIndex] = useState(0);
   const [pics, setPics] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -26,7 +26,7 @@ export const Carousell = () => {
   };
 
   const handleDelete = async () => {
-    if (user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") {
+    if (user.email === admin) {
       await deleteData(pics[index].id, anchorEl, "images");
       handleClose();
       navigate('/gallery');
@@ -58,7 +58,7 @@ export const Carousell = () => {
         id={id}
         open={open}
         anchorEl={anchorEl}
-        onClose={handleClose}
+        onClick={handleClose}
         anchorOrigin={{
           vertical: "center",
           horizontal: "center",
@@ -71,9 +71,9 @@ export const Carousell = () => {
         <img
           src={anchorEl}
           alt=""
-          style={{ maxWidth: "90vw", height: "90vh" }}
+          style={{ maxWidth: "90vw", maxHeight: "90vh" }}
         />
-        {user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2" && <DeleteIcon style={{color: 'red', fontSize: '2rem', 
+        {user.email === admin && <DeleteIcon titleAccess="Törlés" style={{color: 'red', fontSize: '2rem', 
         cursor: 'pointer'}} 
          onClick={handleDelete}></DeleteIcon>}
       </Popover>

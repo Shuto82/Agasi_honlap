@@ -1,75 +1,105 @@
 body {
-    min-width: 280px;
-    background-color: #e6f772;
-    height: 100vh;
+  min-width: 280px;
+  background-color: #e6f772;
+  height: 100vh;
 }
 
-@media (width: 650px) {
-
-    .side-div {
-        font-size: 30px !important;
-    }
-
+@media (max-width: 650px) {
+  .side-div {
+    font-size: 30px !important;
+  }
 }
 
 @media (max-width: 1050px) {
-    .headerpic {
+  .headerpic {
     display: none;
-}
+  }
 
-    iframe {
-        width: 250px;
-        height: 250px;
-    }
+  .side-div {
+    font-size: 20px !important;
+  }
+
+  .img-container {
+    justify-content: center !important;
+  }
+
+  .ámre {
+    font-size: 35px !important;
+  }
+
+  iframe {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .headerpic {
-    max-height: 150px;
-    z-index: 1;
-    border: 3px solid white;
+  max-height: 150px;
+  z-index: 1;
+  border: 3px solid white;
 }
 
 .ámre {
-    display: flex;
-    font-family: "Yellowtail";
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 3px;
-    align-items: center;
+  display: flex;
+  font-family: "Yellowtail";
+  text-align: center;
+  font-size: 4vw;
+  margin: 6px;
+  align-items: center;
 }
 
 .side-div {
-    position: relative;
-    display: flex;
-    background-color: #e8f781;
-    box-shadow: 0 0 15px;
-    font-size: 25px;
+  position: relative;
+  display: flex;
+  background-color: #e8f781;
+  box-shadow: 0 0 15px;
+  font-size: 2vw;
 }
 
 #main-div {
-    margin: 0 auto;
-    text-align: center;
-    min-height: 70vh;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 70vh;
+  padding: 10px;
 }
 
 .MuiStack-root {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .MuiPaper-root {
-    justify-content: center;
+  justify-content: center;
 }
 
 .card-img {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .dropdown-menu {
-    background-color: #e6f772!important;
+  background-color: #e6f772 !important;
 }
 
 .sand {
-    background-color: #e6f772;
+  background-color: #e6f772!important;
+}
+
+.img-container {
+  justify-content: space-between;
+}
+
+.indent {
+  text-indent: 30px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+td {
+  padding: 10px;
+  
+}
+
+table {
+  border-color: #899635;
 }

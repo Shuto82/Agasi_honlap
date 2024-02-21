@@ -8,7 +8,7 @@ import { useContext } from "react";
 import NavItem from "react-bootstrap/esm/NavItem";
 
 export const Navigationbar = () => {
-  const { user, logOutUser } = useContext(UserContext);
+  const { user, admin, logOutUser } = useContext(UserContext);
 
   return (
     <>
@@ -17,7 +17,7 @@ export const Navigationbar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="">
-              {user && user.uid === "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2" && (
+              {user && user.email === admin && (
                 <NavDropdown title="Műveletek" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/newpost">Új hír</NavDropdown.Item>
                   <NavDropdown.Item href="/pictures">Képek</NavDropdown.Item>
@@ -29,7 +29,9 @@ export const Navigationbar = () => {
                 <NavDropdown.Item href="/about">
                   A gyülekezetről
                 </NavDropdown.Item>
-                
+                <NavDropdown.Item href="/council">
+                  A vezetőségről
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Érdeklődőknek" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/worship">

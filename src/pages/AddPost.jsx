@@ -13,7 +13,7 @@ import { Alerts } from "../components/Alerts";
 import { serverTimestamp } from "firebase/firestore";
 
 export const AddPost = () => {
-  const { user } = useContext(UserContext);
+  const { user, admin } = useContext(UserContext);
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
   const [image, setImage] = useState(null);
@@ -21,7 +21,7 @@ export const AddPost = () => {
   const [loading, setLoading] = useState(false);
   const hook = "Feri";
 
-  if (!user || user.uid !== "XjjdcxlAOwgfcJ2cSNpUPgNSYZM2") return <NotFound />;
+  if (!user || user.email !== admin) return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

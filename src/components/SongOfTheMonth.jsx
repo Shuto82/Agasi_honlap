@@ -14,15 +14,14 @@ readDatas(setSong, "songs");
 
 const songNum = song.map(obj => obj.val);
 
-console.log(song)
-
   return (
     <>
-      <div className="container text-center">
-        <FadeIn><div style={{fontFamily: "Yellowtail", fontSize: "2.5rem"}}>Üdvözöljük gyülekezetünk honlapján!</div></FadeIn>
-        <div className="fs-4 m-3">A hónap éneke</div>
+      <div className="container text-center" style={{fontFamily: "Yellowtail"}}>
+        <FadeIn><div >Üdvözöljük gyülekezetünk honlapján!</div></FadeIn>
+        <hr />
+        <div className="m-2">A hónap éneke:</div>
         <div className="fs-1">{songNum}</div>
-        <div className="fs-5 mt-4">
+        <div className="mt-2">
         <a href={`https://enekeskonyv.reformatus.hu/digitalis-reformatus-enekeskonyv/enekek/?szam=${songNum}&q=`}
         style={{textDecoration: "none", color: 'black'}} target="_blank">A református énekeskönyvet itt találják</a>
       </div>
