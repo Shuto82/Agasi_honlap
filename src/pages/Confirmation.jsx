@@ -34,6 +34,14 @@ export const Confirmation = () => {
           vizsgát és hitvallást tesznek. A konfirmáció alsó korhatára ez esetben is 14 év.
           <br />A felkészülés módjában jelentkező anomália még feloldásra vár.
         </p>
+        <p className="indent">
+          <a
+            href="https://reformatus.hu/documents/278/MRE-konfirmacio-rendje.pdf"
+            target="_blank"
+          >
+            A konfirmációs liturgiát itt találják
+          </a>
+        </p>
       </div>
     </div>
   );

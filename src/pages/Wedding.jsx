@@ -32,7 +32,13 @@ export const Wedding = () => {
           <br />A házasságkötés ún. stólaköteles szertartás, azaz fizetni kell
           érte (bár ez bármikor elengedhető). Jelen pillanatban a gyülekezethez
           nem tartozóktól 15.000,-Ft-ot (12.000,-Ft stóla, plusz 3.000,-Ft
-          kántori díj) szoktunk elkérni. A gyülekezet tagjaitól nem kérünk semmit.
+          kántori díj) szoktunk elkérni. A gyülekezet tagjaitól nem kérünk
+          semmit.
+        </p>
+        <p className="indent">
+          <a href="https://reformatus.hu/documents/274/MRE-hazassagkotes-rendje.pdf">
+            Az esküvői szertartás liturgiáját itt találják
+          </a>
         </p>
       </div>
     </div>

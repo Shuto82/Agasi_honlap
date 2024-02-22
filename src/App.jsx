@@ -31,6 +31,15 @@ const FadeIn = styled.div`
 `;
 
 function App() {
+
+  const boxStyle = {
+    display: "block",
+    textDecoration: "none",
+    color: "black",
+    margin: "5px",
+    cursor: "pointer"
+  };
+
   return (
     <>
       <HashRouter>
@@ -49,7 +58,7 @@ function App() {
               alt="Templom ősszel"
             />
           </div>
-          <Navigationbar />
+          <Navigationbar boxStyle={boxStyle} />
           <div className="row mx-auto">
             <div className="col-md-2 justify-content-center side-div">
               <SongOfTheMonth />

@@ -12,7 +12,7 @@ export const Baptism = () => {
           módja is létezik - mi ezt gyakoroljuk.
           <br />A keresztség szentség (más szóval: sákramentum), amely
           szentségből összesen kettő van egyházunkban. A másik az{" "}
-          <a href="/eucharist">úrvacsorai közösség</a>. Az úrvacsorai közösség
+          <a href="#/eucharist">úrvacsorai közösség</a>. Az úrvacsorai közösség
           ismételhető, a keresztség nem.
         </p>
         <p className="indent">
@@ -65,6 +65,14 @@ export const Baptism = () => {
             target="_blank"
           >
             Bővebben itt olvashat róla
+          </a>
+        </p>
+        <p className="indent">
+          <a
+            href="https://reformatus.hu/documents/279/MRE-a-keresztseg-sakramentuma.pdf"
+            target="_blank"
+          >
+            A keresztelési szertartás liturgiáját itt találják
           </a>
         </p>
       </div>

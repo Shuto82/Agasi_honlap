@@ -20,34 +20,47 @@ export const Funeral = () => {
           választja, az számítson rá, hogy Isten szava lesz majd a középpontban,
           az lesz magyarázva, s a feltámadás krisztusi örömüzenete lesz
           hirdetve:{" "}
-          <a href="https://hu.wiktionary.org/wiki/nekrol%C3%B3g" target="_blank">
+          <a
+            href="https://hu.wiktionary.org/wiki/nekrol%C3%B3g"
+            target="_blank"
+          >
             nekrológ
           </a>{" "}
           nem hangzik majd el.
         </p>
         <p className="indent">
-          <strong>Mik a temetési szertartás feltételei?</strong></p>
-          <ul>
-            <li>
-              A hozzátartozók református szertartás szerint szeretnének búcsúzni
-              szerettüktől.
-            </li>{" "}
-            <li>
-              Az elhunyt gyülekezetünk területén élt (ágasegyházi lakcím). Ha
-              nem, úgy gyülekezetek közötti egyeztetésre van szükség, de nem
-              megoldhatatlan.
-            </li>{" "}
-            <li>
-              Továbbá az elhunyt református volt. Bár ez utóbbi feltétel
-              tekintetében is van kivétel, de ez felekezetek közötti egyeztetést
-              igényel, amely egy cseppet problémásabb.
-            </li>
-          </ul>{" "}
-          <p className="indent">A temetés ún. stólaköteles szertartás, azaz fizetni kell érte
-          (bár ez bármikor elengedhető). Amennyiben az elhunyt nem tartozott
+          <strong>Mik a temetési szertartás feltételei?</strong>
+        </p>
+        <ul>
+          <li>
+            A hozzátartozók református szertartás szerint szeretnének búcsúzni
+            szerettüktől.
+          </li>{" "}
+          <li>
+            Az elhunyt gyülekezetünk területén élt (ágasegyházi lakcím). Ha nem,
+            úgy gyülekezetek közötti egyeztetésre van szükség, de nem
+            megoldhatatlan.
+          </li>{" "}
+          <li>
+            Továbbá az elhunyt református volt. Bár ez utóbbi feltétel
+            tekintetében is van kivétel, de ez felekezetek közötti egyeztetést
+            igényel, amely egy cseppet problémásabb.
+          </li>
+        </ul>{" "}
+        <p className="indent">
+          A temetés ún. stólaköteles szertartás, azaz fizetni kell érte (bár ez
+          bármikor elengedhető). Amennyiben az elhunyt nem tartozott
           gyülekezetünkhöz, úgy 20.000,-Ft-nyi gyülekezeti hozzájárulást
           szoktunk elkérni. Amennyiben az elhunyt gyülekezetünk tagja volt, úgy
           nem kérünk semmit.
+        </p>
+        <p className="indent">
+          <a
+            href="https://reformatus.hu/documents/277/MRE-a-temetesi-istentisztelet-rendje.pdf"
+            target="_blank"
+          >
+            A temetési szertartás liturgiáját itt találják
+          </a>
         </p>
       </div>
     </div>
