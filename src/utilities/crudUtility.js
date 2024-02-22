@@ -68,6 +68,7 @@ export const deleteData = async (id, picId, folder) => {
   await deleteDoc(doc(db, folder, id));
 };
 
+//Hónap éneke szerkesztése
 export const editSong = async (id, val, folder) => {
   const docRef = doc(db, folder, id);
   await updateDoc(docRef, {val});

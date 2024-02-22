@@ -64,7 +64,7 @@ function App() {
               <SongOfTheMonth />
             </div>
             <div id="main-div" className="col-md-10 sand">
-              <Routes path="/" component={root}>
+              <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="signin" element={<SignIn />} />
                 <Route path="newpost" element={<AddPost />} />
