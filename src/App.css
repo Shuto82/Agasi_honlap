@@ -103,3 +103,7 @@ td {
 table {
   border-color: #899635;
 }
+
+p, li{
+  font-size: 1.2rem;
+}

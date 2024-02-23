@@ -7,6 +7,7 @@ import { UserContext } from "../context/UserContext";
 import { useContext } from "react";
 import NavItem from "react-bootstrap/esm/NavItem";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const muveletekMenu = [
   { path: "newpost", name: "Új hír" },
@@ -26,8 +27,19 @@ const erdeklodoknekMenu = [
   { path: "wedding", name: "Házasságkötés" },
   { path: "funeral", name: "Temetés" },
 ];
-export const Navigationbar = ({boxStyle}) => {
+export const Navigationbar = ({ boxStyle }) => {
   const { user, admin, logOutUser } = useContext(UserContext);
+
+  function changeBackgroundOn(e) {
+    e.target.style.background = "white";
+  }
+
+  function changeBackgroundOff(e) {
+    e.target.style.background = "#e6f772";
+  }
+
+  
+
 
   return (
     <>
@@ -45,49 +57,71 @@ export const Navigationbar = ({boxStyle}) => {
                   title="Műveletek"
                   id="basic-nav-dropdown"
                   style={{ display: "flex", flexDirection: "column" }}
+                  onMouseEnter={changeBackgroundOn}
+                  onMouseLeave={changeBackgroundOff}
                 >
                   {muveletekMenu.map((obj) => (
                     <NavLink
                       style={boxStyle}
                       key={obj.path}
                       to={obj.path}
+                      onMouseEnter={changeBackgroundOn}
+                      onMouseLeave={changeBackgroundOff}
                     >
                       {obj.name}
                     </NavLink>
                   ))}
                 </NavDropdown>
               )}
-              <Nav.Link href="/">Híreink</Nav.Link>
+              <Nav.Link
+                href="/"
+                onMouseEnter={changeBackgroundOn}
+                onMouseLeave={changeBackgroundOff}
+              >
+                Híreink
+              </Nav.Link>
               <NavDropdown
                 title="Rólunk"
-                id="basic-nav-dropdown"
+                id="navigation-dropdown"
                 style={{ display: "flex", flexDirection: "column" }}
+                onMouseEnter={changeBackgroundOn}
+                onMouseOut={changeBackgroundOff}
+                
               >
                 {rolunkMenu.map((obj) => (
                   <NavLink
                     style={boxStyle}
                     key={obj.path}
                     to={obj.path}
+                    onMouseEnter={changeBackgroundOn}
+                    onMouseLeave={changeBackgroundOff}
+                    auto
                   >
                     {obj.name}
                   </NavLink>
                 ))}
               </NavDropdown>
+              
               <NavDropdown
                 title="Érdeklődőknek"
-                id="basic-nav-dropdown"
+                id="navigation-dropdown"
                 style={{ display: "flex", flexDirection: "column" }}
-              >
+                onMouseEnter={changeBackgroundOn}
+                onMouseOut={changeBackgroundOff}
+                className="a"
+                >
                 {erdeklodoknekMenu.map((obj) => (
                   <NavLink
                     style={{
                       display: "block",
                       textDecoration: "none",
                       color: "black",
-                      margin: "5px"
+                      margin: "5px",
                     }}
                     key={obj.path}
                     to={obj.path}
+                    onMouseEnter={changeBackgroundOn}
+                    onMouseLeave={changeBackgroundOff}
                   >
                     {obj.name}
                   </NavLink>
@@ -101,17 +135,41 @@ export const Navigationbar = ({boxStyle}) => {
                     textDecoration: "none",
                     color: "black",
                   }}
+                  onMouseEnter={changeBackgroundOn}
+                  onMouseLeave={changeBackgroundOff}
                 >
                   Elérhetőségeink
                 </NavLink>{" "}
               </Nav.Link>
-              {user && (
-                <Nav.Link href="#">
-                  <NavLink to="gallery" style={{
+              <Nav.Link href="#">
+                <NavLink
+                  to="usefullinks"
+                  style={{
                     display: "block",
                     textDecoration: "none",
                     color: "black",
-                  }}> Galéria</NavLink>
+                  }}
+                  onMouseEnter={changeBackgroundOn}
+                  onMouseLeave={changeBackgroundOff}
+                >
+                  Hasznos linkek
+                </NavLink>{" "}
+              </Nav.Link>
+              {user && (
+                <Nav.Link href="#">
+                  <NavLink
+                    to="gallery"
+                    style={{
+                      display: "block",
+                      textDecoration: "none",
+                      color: "black",
+                    }}
+                    onMouseEnter={changeBackgroundOn}
+                    onMouseLeave={changeBackgroundOff}
+                  >
+                    {" "}
+                    Galéria
+                  </NavLink>
                 </Nav.Link>
               )}
             </Nav>
@@ -126,6 +184,8 @@ export const Navigationbar = ({boxStyle}) => {
                     textDecoration: "none",
                     color: "black",
                   }}
+                  onMouseEnter={changeBackgroundOn}
+                  onMouseLeave={changeBackgroundOff}
                 >
                   Bejelentkezés
                 </NavLink>{" "}
@@ -134,6 +194,8 @@ export const Navigationbar = ({boxStyle}) => {
               <NavItem
                 style={{ cursor: "pointer" }}
                 onClick={() => logOutUser()}
+                onMouseEnter={changeBackgroundOn}
+                onMouseLeave={changeBackgroundOff}
               >
                 Kijelentkezés
               </NavItem>
