@@ -25,18 +25,22 @@ export const readPost = async (id, setPost) => {
   }
 };
 
-export const editPost = async (id, description, title) => {
+export const editPost = async ({id, description, title, photoUrl}) => {
   const docRef = doc(db, 'posts', id);
-  await updateDoc(docRef, {description, title});
-
+  await updateDoc(docRef, {description, title, photoUrl });
 } 
 
 //Képek kezelése
 
-export const addPic = async (url) => {
-    const collectionRef = collection(db, "images");
+export const addPic = async (url, folder) => {
+    const collectionRef = collection(db, folder);
   const newItem = { photoUrl: url, timestamp: serverTimestamp() };
   const newDocRef = await addDoc(collectionRef, newItem);
+}
+
+export const deletePic = async (photoUrl) => {
+  const delRef = ref(storage, photoUrl);
+  deleteObject(delRef).then();
 }
 
 //Vegyes függvények

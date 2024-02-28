@@ -59,7 +59,7 @@ export const Details = () => {
         <button className="btn btn-primary" onClick={() => navigate('/')}>Vissza</button>
       </div>
     </div>
-    {open && <EditPost open = {open} setOpen = {setOpen} id = {post.id} desc = {post.description} t={post.title} photo={post.photoUrl} />}
+    {open && <EditPost open = {open} setOpen = {setOpen} id = {post.id} desc = {post.description} t={post.title} p={post.photoUrl} />}
   </>
   )
 }

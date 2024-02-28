@@ -38,9 +38,6 @@ export const Navigationbar = ({ boxStyle }) => {
     e.target.style.background = "#e6f772";
   }
 
-  
-
-
   return (
     <>
       <Navbar
@@ -48,10 +45,15 @@ export const Navigationbar = ({ boxStyle }) => {
         className="sticky-top fs-5"
         style={{ backgroundColor: "#e6f772" }}
       >
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="">
+        <Container >
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => {
+              document.body.click();
+            }} />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            
+          >
+            <Nav>
               {user && user.email === admin && (
                 <NavDropdown
                   title="Műveletek"
@@ -59,6 +61,7 @@ export const Navigationbar = ({ boxStyle }) => {
                   style={{ display: "flex", flexDirection: "column" }}
                   onMouseEnter={changeBackgroundOn}
                   onMouseLeave={changeBackgroundOff}
+                  onSelect={() => null}
                 >
                   {muveletekMenu.map((obj) => (
                     <NavLink
@@ -67,6 +70,9 @@ export const Navigationbar = ({ boxStyle }) => {
                       to={obj.path}
                       onMouseEnter={changeBackgroundOn}
                       onMouseLeave={changeBackgroundOff}
+                      onClick={() => {
+                        document.body.click();
+                      }}
                     >
                       {obj.name}
                     </NavLink>
@@ -86,7 +92,6 @@ export const Navigationbar = ({ boxStyle }) => {
                 style={{ display: "flex", flexDirection: "column" }}
                 onMouseEnter={changeBackgroundOn}
                 onMouseOut={changeBackgroundOff}
-                
               >
                 {rolunkMenu.map((obj) => (
                   <NavLink
@@ -95,13 +100,15 @@ export const Navigationbar = ({ boxStyle }) => {
                     to={obj.path}
                     onMouseEnter={changeBackgroundOn}
                     onMouseLeave={changeBackgroundOff}
-                    auto
+                    onClick={() => {
+                      document.body.click();
+                    }}
                   >
                     {obj.name}
                   </NavLink>
                 ))}
               </NavDropdown>
-              
+
               <NavDropdown
                 title="Érdeklődőknek"
                 id="navigation-dropdown"
@@ -109,7 +116,7 @@ export const Navigationbar = ({ boxStyle }) => {
                 onMouseEnter={changeBackgroundOn}
                 onMouseOut={changeBackgroundOff}
                 className="a"
-                >
+              >
                 {erdeklodoknekMenu.map((obj) => (
                   <NavLink
                     style={{
@@ -122,6 +129,9 @@ export const Navigationbar = ({ boxStyle }) => {
                     to={obj.path}
                     onMouseEnter={changeBackgroundOn}
                     onMouseLeave={changeBackgroundOff}
+                    onClick={() => {
+                      document.body.click();
+                    }}
                   >
                     {obj.name}
                   </NavLink>
@@ -139,20 +149,6 @@ export const Navigationbar = ({ boxStyle }) => {
                   onMouseLeave={changeBackgroundOff}
                 >
                   Elérhetőségeink
-                </NavLink>{" "}
-              </Nav.Link>
-              <Nav.Link href="#">
-                <NavLink
-                  to="usefullinks"
-                  style={{
-                    display: "block",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                  onMouseEnter={changeBackgroundOn}
-                  onMouseLeave={changeBackgroundOff}
-                >
-                  Hasznos linkek
                 </NavLink>{" "}
               </Nav.Link>
               {user && (

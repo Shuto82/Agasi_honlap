@@ -21,14 +21,13 @@ export const FileInput = ({setImage, hook}) => {
     setImageUrl(null)
     setErr(null)
     if (event.target.files && event.target.files[0]) {
-      if (event.target.files[0].size > 1 * 2000 * 2048) {
-        setErr("Csak 4MB méret alatti fájlok engedélyezettek!");
+      if (event.target.files[0].size > 1 * 1500 * 1536) {
+        setErr("Csak 2,5 MB méret alatti fájlok engedélyezettek!");
         return false;
       }
     setSelectedImage(event.target.files[0])
     }
 }
-console.log(err);
 
   return (
     <Box sx={{display:'flex'}}>

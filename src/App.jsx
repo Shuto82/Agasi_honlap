@@ -25,7 +25,6 @@ import { Wedding } from "./pages/Wedding";
 import { Funeral } from "./pages/Funeral";
 import { About } from "./pages/About";
 import { Council } from "./pages/Council";
-import { UsefulLinks } from "./pages/UsefulLinks";
 
 const FadeIn = styled.div`
   animation: 3s ${keyframes`${fadeIn}`};
@@ -82,7 +81,6 @@ function App() {
                 <Route path="funeral" element={<Funeral />} />
                 <Route path="about" element={<About />} />
                 <Route path="council" element={<Council />} />
-                <Route path="usefullinks" element={<UsefulLinks />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
