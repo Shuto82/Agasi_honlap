@@ -21,7 +21,7 @@ export const AddPost = () => {
   const [loading, setLoading] = useState(false);
   const hook = "Feri";
 
-  if (!user || user.email !== admin) return <NotFound />;
+  if (!user || !admin) return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -14,7 +14,7 @@ export const AddPic = () => {
   const [uploaded, setUploaded] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!user || user.email !== admin) return <NotFound />;
+  if (!user || !admin) return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

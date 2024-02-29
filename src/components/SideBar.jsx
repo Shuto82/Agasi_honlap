@@ -14,7 +14,7 @@ export const SideBar = () => {
     readDatas(setSong, "songs");
   },[])
   
-if (!user || user.email !== admin) return <NotFound />;
+if (!user || !admin) return <NotFound />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

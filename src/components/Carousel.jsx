@@ -26,7 +26,7 @@ export const Carousell = () => {
   };
 
   const handleDelete = async () => {
-    if (user.email === admin) {
+    if (admin) {
       await deleteData(pics[index].id, anchorEl, "images");
       handleClose();
       navigate('/gallery');
@@ -73,7 +73,7 @@ export const Carousell = () => {
           alt=""
           style={{ maxWidth: "90vw", maxHeight: "90vh" }}
         />
-        {user.email === admin && <DeleteIcon titleAccess="Törlés" style={{color: 'red', fontSize: '2rem', 
+        {admin && <DeleteIcon titleAccess="Törlés" style={{color: 'red', fontSize: '2rem', 
         cursor: 'pointer'}} 
          onClick={handleDelete}></DeleteIcon>}
       </Popover>

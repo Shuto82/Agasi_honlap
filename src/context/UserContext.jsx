@@ -13,17 +13,20 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [msg, setMsg] = useState(null);
   const navigate = useNavigate();
-  const admin = "shuto82@gmail.com";
+  const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-  }, []);
+  }, [user]);
 
   const signInUser = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      if (email == "shuto82@gmail.com" || email == "kmagdi@kkando.hu") {
+        setAdmin(true);
+      }
       setMsg(null);
       navigate("/");
     } catch (err) {
@@ -33,11 +36,11 @@ export const UserProvider = ({ children }) => {
 
   const logOutUser = async () => {
     await signOut(auth);
+    setAdmin(false);
     navigate("/");
   };
 
-  
-
+  console.log(admin);
   return (
     <UserContext.Provider
       value={{ user, admin, logOutUser, signInUser, msg, setMsg }}
