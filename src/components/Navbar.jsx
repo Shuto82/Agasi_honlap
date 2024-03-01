@@ -51,7 +51,7 @@ export const Navigationbar = ({ boxStyle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              {user && admin && (
+              {admin && 
                 <NavDropdown
                   title="Műveletek"
                   id="basic-nav-dropdown"
@@ -73,7 +73,7 @@ export const Navigationbar = ({ boxStyle }) => {
                     </NavLink>
                   ))}
                 </NavDropdown>
-              )}
+              }
               <Nav.Link
                 href="/"
                 onMouseEnter={changeBackgroundOn}

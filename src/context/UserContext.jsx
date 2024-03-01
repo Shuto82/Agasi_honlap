@@ -18,15 +18,15 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      if (currentUser.email == "shuto82@gmail.com") {
+        setAdmin(true);
+      }
     });
-  }, [user]);
+  }, []);
 
   const signInUser = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      if (email == "shuto82@gmail.com" || email == "kmagdi@kkando.hu") {
-        setAdmin(true);
-      }
       setMsg(null);
       navigate("/");
     } catch (err) {
@@ -40,7 +40,10 @@ export const UserProvider = ({ children }) => {
     navigate("/");
   };
 
+  console.log(user)
+
   console.log(admin);
+  
   return (
     <UserContext.Provider
       value={{ user, admin, logOutUser, signInUser, msg, setMsg }}

@@ -22,7 +22,7 @@ export const AddPic = () => {
     setUploaded(false);
     try {
       const photoUrl = await uploadFile("pictures", image);
-      await addPic(photoUrl, );
+      await addPic(photoUrl, "images");
       setUploaded(true);
     } catch (err) {
       console.log(err);

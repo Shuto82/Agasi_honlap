@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Navigationbar } from "./components/Navbar";
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <UserProvider>
           <div
             className="img-container d-flex"
@@ -86,7 +86,7 @@ function App() {
             </div>
           </div>
         </UserProvider>
-      </HashRouter>
+      </BrowserRouter>
       <footer>
         <div
           className="text-center border-top"
