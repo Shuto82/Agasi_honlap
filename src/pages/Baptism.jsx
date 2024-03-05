@@ -11,9 +11,8 @@ export const Baptism = () => {
           gyermek vagy felnőtt fejét. A keresztelésnek egyébként számos más
           módja is létezik - mi ezt gyakoroljuk.
           <br />A keresztség szentség (más szóval: sákramentum), amely
-          szentségből összesen kettő van egyházunkban. A másik az{" "}
-          <a href="eucharist">úrvacsorai közösség</a>. Az úrvacsorai közösség
-          ismételhető, a keresztség nem.
+          szentségből összesen kettő van egyházunkban. A másik az úrvacsorai
+          közösség. Az úrvacsorai közösség ismételhető, a keresztség nem.
         </p>
         <p className="indent">
           <strong>Miért gyakoroljuk?</strong> Mert Jézus Krisztus így rendelte,
@@ -55,9 +54,9 @@ export const Baptism = () => {
           alapján történő beszélgetés-sorozat), mely folyamat pár hónapig tart
           (előzetes ismeretek megléte folytán ez változó). Ennek végén
           hitvallást tesznek és megtörténik a keresztelés. <br />
-          Gyermekek esetén: a gyülekezet területén élnek (ágasegyházi lakcím), s a szülők vagy
-          keresztszülők közül legalább 1 református. A felkészülés jelenleg
-          egy szülőkkel folytatott beszélgetés formájában történik.
+          Gyermekek esetén: a gyülekezet területén élnek (ágasegyházi lakcím), s
+          a szülők vagy keresztszülők közül legalább 1 református. A felkészülés
+          jelenleg egy szülőkkel folytatott beszélgetés formájában történik.
         </p>
         <p className="indent">
           <a

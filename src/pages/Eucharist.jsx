@@ -12,17 +12,14 @@ export const Eucharist = () => {
           <br /> Ez egy konkrét cselekvéssel járó esemény, amely során egy falat
           kenyeret eszünk, illetve egy korty bort iszunk. Az úrvacsorai közösség
           szentség (más szóval: sákramentum), amely szentségből összesen kettő
-          van egyházunkban. A másik a{" "}
-          <a href="baptism">
-            keresztség
-          </a>
-          . Az úrvacsorai közösség ismételhető, a keresztség nem.
+          van egyházunkban. A másik a keresztség. Az úrvacsorai közösség
+          ismételhető, a keresztség nem.
         </p>
         <p className="indent">
-          <strong>Miért gyakoroljuk?</strong> Mert Jézus Krisztus így rendelte, valamint
-          ezzel a fizikai cselekvéssel egy lelki történést igyekszünk egyszerre
-          kifejezni és átélni: Jézusért a bűneink meg vannak bocsátva. A
-          közösség összetartozása is megjelenik abban, ahogyan egy kenyérből
+          <strong>Miért gyakoroljuk?</strong> Mert Jézus Krisztus így rendelte,
+          valamint ezzel a fizikai cselekvéssel egy lelki történést igyekszünk
+          egyszerre kifejezni és átélni: Jézusért a bűneink meg vannak bocsátva.
+          A közösség összetartozása is megjelenik abban, ahogyan egy kenyérből
           eszünk, egy borból iszunk, illetve ahogyan körbeálljuk az Úr asztalát.
           Mi mostanában nem egy kehelyből iszunk, hanem kisebb poharakból, de a
           lényeg ugyanaz.
@@ -56,7 +53,6 @@ export const Eucharist = () => {
             A úrvacsora liturgiáját itt találják
           </a>
         </p>
-        
       </div>
     </div>
   );
