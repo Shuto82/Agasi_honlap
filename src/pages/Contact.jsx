@@ -11,13 +11,13 @@ export const Contact = () => {
       <div className="col-md-6 col-sm-12">
       <h2 className="m-3 gap-1"><ContactPhoneTwoToneIcon className="fs-1 m-1" color="success"></ContactPhoneTwoToneIcon>Telefon</h2>
         <p className="fs-5 m-2">
-          Adamek Norbert, lelkész: +36308470769
+          Adamek Norbert, lelkész: <a href="tel:+36308470769">+36308470769</a>
         </p>
         <p className="fs-5 m-2">
           Polgár Péter Pál, főgondnok: +3630
         </p><br />
         <h2 className="m-3"><AlternateEmailTwoToneIcon className="fs-1 m-1" color="success"></AlternateEmailTwoToneIcon>E-mail</h2>
-        <p className="fs-5 m-2">agasegyhaza@reformatus.hu</p><br />
+        <p className="fs-5 m-2"><a href="mailto:agasegyhaza@reformatus.hu">agasegyhaza@reformatus.hu</a></p><br />
         <h2 className="m-3"><FacebookOutlinedIcon className="fs-1 m-1" color="success"></FacebookOutlinedIcon>Facebook</h2>
         <p className="fs-5 m-2"><a href="https://www.facebook.com/profile.php?id=100072184001086" target="_blank">Ide kattintva elérhető</a></p><br />
         <h2 className="m-3"><SavingsIcon className="fs-1 m-1" color="success"></SavingsIcon>Bankszámlaszám</h2>
