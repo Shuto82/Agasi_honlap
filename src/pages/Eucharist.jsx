@@ -13,7 +13,7 @@ export const Eucharist = () => {
           kenyeret eszünk, illetve egy korty bort iszunk. Az úrvacsorai közösség
           szentség (más szóval: sákramentum), amely szentségből összesen kettő
           van egyházunkban. A másik a{" "}
-          <a href="#/baptism">
+          <a href="baptism">
             keresztség
           </a>
           . Az úrvacsorai közösség ismételhető, a keresztség nem.
